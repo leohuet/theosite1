@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+
+</head>
+
+
+<body id="bodyy">
+
+<header>
+
+</header>
+
+
+<main>
+
+<h3 id="texte1"> Tout vient à point à qui sait attendre </h3>
+
+<button id="button1" onclick="quiSaitAttendre()"> J'ai assez attendu ! </button>
+
+
+<div id="gallery" tabindex="0">
+
+
+
+</div>
+
+
+<script type="text/javascript">
+
+let xPos = 0;
+let yPos = 0;
+
+window.addEventListener("mousemove", (e) => {
+  xPos = e.clientX;
+  yPos = e.clientY;
+
+});
+
+let numberimg = 0;
+
+window.addEventListener("click", (e) => {
+  let click = e.button;
+  // console.log(click);
+  if(click == 0) {
+
+  }
+});
+
+var count = 0;
+var progressBarId = setInterval(counter ,1000);
+
+function counter(){
+  count += 1;
+}
+
+function quiSaitAttendre(){
+  if(count >= 5 && count < 10) {
+    alert('Attends encore un peu ...');
+  }
+  if(count >= 11) {
+    let texte1 = document.getElementById("texte1");
+    let button1 = document.getElementById("button1");
+    texte1.innerHTML = "On ne voit bien qu'avec le coeur, l'essentiel est invisible pour les yeux";
+    button1.innerHTML = "invisible";
+    document.body.style.backgroundColor = "transparent";
+    document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('images/coeurs2.png')";
+    let buttoninvisible = document.createElement('button');
+    buttoninvisible.id = "buttoninvisible";
+    buttoninvisible.innerHTML = "here is the solution";
+    buttoninvisible.onclick = function() {
+      console.log("invisible");
+      document.body.style.backgroundImage = "linear-gradient(rgba(255, 0, 0, 1), rgba(255, 255, 0, 1))";
+      texte1.innerHTML = "Bien ouej";
+    };
+    document.body.appendChild(buttoninvisible);
+  }
+}
+
+</script>
+
+</main>
+
+
+</body>
+</html>

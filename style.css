@@ -1,0 +1,90 @@
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+  font-family: "Space-mono", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: red;
+}
+
+img {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+}
+
+#output {
+background-color: #ffffff;
+width: 40vmin;
+max-width: 300px;
+padding: 10px 10px;
+position: absolute;
+transform: translate(-50%, -50%);
+top: 10%;
+left: 50%;
+text-align: center;
+border-radius: 1px;
+box-shadow: 0 20px 50px rgba(4, 1, 22, 0.12);
+font-size: 1em;
+display: flex;
+justify-content: center;
+}
+#output div {
+margin: 0px 10px;
+}
+span {
+color: #0c58af;
+}
+
+#button1 {
+  position: fixed;
+  top: 80vh;
+  left: 50px;
+  width: 20vw;
+  min-width: 100px;
+  background-color: black;
+  border: 2px solid white ;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+#button1:hover {
+  background-color: white;
+  color: black;
+}
+
+#texte1 {
+  position: absolute;
+  left: 20vw;
+  top: 40vh;
+  width: 500vw;
+  height: auto;
+  font-size: 50px;
+  text-align: left;
+
+}
+
+#buttoninvisible {
+  position: absolute;
+  left: 1600px;
+  top: 0px;
+  width: 200px;
+  height: auto;
+  background-color: transparent;
+  border: 0px;
+  color: transparent;
+  padding: 100px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
